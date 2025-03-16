@@ -1,0 +1,299 @@
+
+
+#slider-2 {
+    
+    position:relative;
+    padding-bottom: 6rem;
+    padding-top: 2.8rem;
+}
+
+/* Container */
+.container {
+    max-width: auto;
+    padding-top: 2rem;
+    /* margin: auto; */
+}
+.swiper-wrapper {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  gap: 20px; /* Add space between images */
+}
+
+.swiper-slide {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center; /* Center content inside each slide */
+}
+
+
+
+.swiper-slide img {
+  display: block;
+ 
+  object-fit: cover;
+  
+  height: auto;
+  
+}
+p span{
+  text-decoration: line-through;
+}
+
+#percent{
+  background-color: #ebdede;
+  margin-left: 30px;
+  padding: 3px;
+  font-size: smaller;
+  text-decoration: none;
+}
+
+.swiper-custom-nav {
+  position: absolute;
+  top: 40%;
+  color: black;
+  left: 0;
+  z-index: 10;
+  padding: 0 ;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.swiper-custom-nav svg {
+  cursor: pointer;
+  
+  transition: all .3s ;
+}
+#nav-left, #nav-right {
+  background: none; /* Removes the background */
+  border-radius: 0; /* Ensures no rounded corners */
+  padding: 0; /* Removes any padding */
+}
+
+#nav-left path, #nav-right path {
+  fill: black; /* Sets the arrow color to black */
+}
+
+#nav-left:hover, #nav-right:hover {
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  opacity: 0.7;
+  background-color: #beb7b7;
+  border-radius: 50%; 
+  transition: 0s none;/* Adds a slight transparency on hover */
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .swiper-slide img {
+      height: 20rem;
+  }
+
+  .swiper-custom-nav {
+      display: none;
+  }
+}
+.balasarad{
+  align-items: center;
+  
+}
+
+@media (max-width: 768px) {
+  .balasarad {
+    flex-direction: column;
+    gap: 30px;
+    flex-grow: 1;
+    padding-top:20px;
+    height: 70vh;
+    
+    /* Allow height to adjust when stacked */
+  }
+
+  .balatext{
+    margin-bottom: 10px;
+    margin-top: 170px;
+    padding-bottom: 300px;
+  }
+  
+  .balaimg {
+    width: 100%;
+    text-align: center;
+    margin-top: 190px;
+    flex-grow: 1;
+  }
+}
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: auto;
+  
+}
+
+.image-container {
+  width: 50%;
+  max-width: 500px;
+  padding: 10px;
+}
+
+
+
+.image-container img {
+  position:relative;
+  left: 50px;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+ 
+  /* border-radius: 50%; */
+  /* Dome shape */
+  transition: border-radius 0.3s ease;
+}
+
+.text-container {
+  width: 50%;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+
+  .image-container,
+  .text-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-container img {
+    border-radius: 0;
+    width: 100%;
+    /* Square shape */
+  }
+}
+
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-item img {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+/* Styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .list-container {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .list-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    justify-content: center;
+  }
+
+  .list-item img {
+    max-width: 80px;
+  }
+}
+
+.container-footer-newsletter {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center; /* Space out the elements evenly */
+    align-items: flex-start; /* Align items to the top */
+   /* Optional: Add some padding around */
+    
+    /* Background Image Styling */
+    background-image: url(assets/Footer-image.webp); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+     /* Make sure it covers the entire width */
+    height: 100vh; 
+    margin-top: -5px;
+    padding-top: 70px;/* Adjust the height automatically based on content */
+}
+
+/* Footer styling */
+.footer {
+    position: relative;
+    left: 40px;
+    padding-left: 40px;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1; /* Allow footer to take up remaining space */
+}
+
+/* Footer ul styling */
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 30px;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    font-family: 'YourFont'; /* Replace 'YourFont' with your font family */
+}
+
+/* Newsletter container */
+#newsletter {
+    flex-shrink: 0; /* Prevent shrinking of the newsletter section */
+    margin-left: 40px; /* Optional: Add margin to the left for spacing */
+    text-align: center; /* Center align the text in the newsletter section */
+}
+
+#newsletter h3 {
+    margin-bottom: 15px;
+}
+
+#newsletter input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#signup {
+    padding: 10px 20px;
+    background-color: #8B572A; /* Change this color to your theme */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .container-footer-newsletter {
+    flex-direction: column;
+    align-items: center;
+    /* Stack divs vertically */
+  }
+}
+
+.social-container{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.social-icon{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.social-icon img{
+  height: 30px;
+}
